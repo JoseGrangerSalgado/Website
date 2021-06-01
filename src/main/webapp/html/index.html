@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../Images/favicon.png">
+  <link type="text/css" rel="stylesheet" href="../css/mainstyles.css">
+  <link type="text/css" rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Jose Webpage</title>
+</head>
+
+<body onload="loadTasks()">
+  <div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+  </div>
+
+  <div id="my-nav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content" onclick="closeNav()">
+      <a href="#who">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact-button">Contact</a>
+      <a href="#task-list">User Comments</a>
+    </div>
+  </div>
+
+  <div id="my-nav2" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+    <div class="overlay-content" onclick="closeNav2()">
+      <p>Submission Recieved!</p>
+    </div>
+  </div>
+
+
+  <div id=introduction class=intro>
+    <div id=navigation-bar>
+      <div id=menu onclick="openNav()"><img src="../Images/navigation.png" alt="navmenu"></div>
+      <button id="play-button2" onclick="playMusic()"></button>
+    </div>
+    <div id=typewriter>
+      <p class="line-1 anim-typewriter-1">Jose Granger Salgado</p>
+    </div>
+    <div id=typewriter-2>
+      <p class="line-2 anim-typewriter-2">Computer Science Undergraduate</p>
+    </div>
+    <div id=audiomisc>
+      <audio id="audio">
+        <source src="../Images/cherry_blossom.mp3" type="audio/mpeg">
+      </audio>
+      <button id="play-button1" onclick="playMusic()"></button>
+      <p id="mustex"> Listen to some chill music while you browse my website (You can pause it)</p>
+    </div>
+    <img id=centimg src="../Images/img-2.gif" alt="nightsky">
+    <div id=enter>
+      <button id="enter-button" onclick="realPage()">Enter Site</button>
+    </div>
+    <div id=scroll>
+      <a href="#who"><img src="../Images/scroll.jpg" alt="scrolldown"></a>
+    </div>
+    <div id=star class="stars"></div>
+    <div id= twinkle class="twinkling"></div>
+    <div id= cloud class="clouds"></div>
+  </div>
+  <div class=about-me>
+    <div id="who" data-aos="fade-down"><strong>About Me</strong></div>
+    <div id=in-who data-aos="fade-down">
+      <p>I am studying a Bachelor in <span style="color: #f2b944">Computer Science</span> at a school called <a
+          href="https://tec.mx/en/about-us" target="_blank"><span id="tec"
+            style="color: lightskyblue; cursor:pointer;">Instituto Tecnológico y de Estudios Superiores de
+            Monterrey, Campus Santa Fe</span></a>. Although I have lived in Mexico City for most of my life, I love
+        going to new places and integrating with new cultures, due to which I have participated in various exchange
+        programs. I love <span style="color: #f2b944">software and hardware development</span> since I consider myself a
+        creative person with an affinity for creating new things. </p>
+    </div>
+
+    <div class="slideshow-container" data-aos="flip-up">
+      <div class="myslides fade">
+        <div class="number-text">1 / 3</div>
+        <img src="../Images/gal1.jpg" style="width:100%" alt="gal1">
+        <div class="text">Berlin</div>
+      </div>
+
+      <div class="myslides fade">
+        <div class="number-text">2 / 3</div>
+        <img src="../Images/gal2.jpg" style="width:100%" alt="gal2">
+        <div class="text">Myself</div>
+      </div>
+
+      <div class="myslides fade">
+        <div class="number-text">3 / 3</div>
+        <img src="../Images/gal3.jpg" style="width:100%" alt="gal2">
+        <div class="text">Skyline</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center; padding-left: 4vh;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div id=end-who>
+      <div id=ewi data-aos="fade-right"><img src="../Images/mi1.jpg" alt="code"></div>
+      <div id=ewt data-aos="fade-left" style="padding-left:10vh;">
+        <p>My hobbies are <span style="color: #f2b944">coding, reading, playing videogames and doing some
+            sports</span>. I am most passionate about the front-end side of development, though I still enjoy coding
+          algorithms and various back-end products. My interests are mainly around developing innovative products for
+          both web and mobile, though
+          I am
+          <span style="color: #f2b944">always open to new experiences</span> and methods.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class=project id=projects>
+
+    <div id="proi" data-aos="fade-down"><strong>Projects</strong></div>
+    <div class=card data-aos="fade-right">
+      <div id=struo><img src="../Images/proj1.jpeg" alt="struo">
+        <p style="font-size:x-large;"><strong>Struo App</strong></p>
+        <p>The <span style="color: blue">prototype</span> of an <span style="color: blue">organizational
+            app</span> made for the <span style="color: blue">OneMonthHack</span> challenge</p>
+        <div id=git><a href="https://github.com/JoseGrangerSalgado/StruoAPP" target="_blank">Github</a></div>
+      </div>
+    </div>
+    <div class=card data-aos="fade-down">
+      <div id=kmeans><img src="../Images/proj2.png" alt="kmeans">
+        <p style="font-size:x-large;"><strong>KMeans Algorithm</strong></p>
+        <p>An organized <span style="color: blue">Github repository</span> exploring a basic <span
+            style="color: blue">algorithm of classification</span>, using and understanding a bare-bones base into <span
+            style="color: blue">A.I. system development</span></p>
+        <div id=git><a href="https://github.com/JoseGrangerSalgado/K_MeansPython" target="_blank">Github</a></div>
+      </div>
+    </div>
+    <div class=card data-aos="fade-left">
+      <div id=adt><img src="../Images/pro3.png" alt="adt">
+        <p style="font-size:x-large;"><strong>Network Attack</strong></p>
+        <p>Using a csv dataset which simulates an <span style="color: blue">attack on a network</span>, we made use of
+          various <span style="color: blue">algorithms and data </span> in order to correctly identify the <span
+            style="color: blue">problematic connection</span>,
+          how long the attack has been going on and <span style="color: blue">possible solutions</span></p>
+        <div id=git><a href="https://github.com/JoseGrangerSalgado/Reto_Algoritmos" target="_blank">Github</a></div>
+      </div>
+    </div>
+    <div class=card data-aos="fade-right">
+      <div id=webpage><img src="../Images/pro4.png" alt="webpage">
+        <p style="font-size:x-large;"><strong>Website</p></strong>
+        <p>A work of love and passion, this website is one of the projects I am most proud of, My plan is to
+          <span style="color: blue">continually improve it</span> and add various <span style="color: blue">back-end
+            software using databases and Javascript
+        </p>
+        <div id=git><a href="https://github.com/JoseGrangerSalgado" target="_blank">Github</a></div>
+      </div>
+    </div>
+    <div class=card data-aos="fade-down">
+      <div id=kmeans><img src="../Images/battle_system_3.png" alt="Mainframe">
+        <p style="font-size:x-large;"><strong>Into The Mainframe</strong></p>
+        <p>Fully working video game developed in Unity, uploaded into a live website with WebGL.<span style="color: blue">Uses C#, 
+            Javascript, NodeJs, ExpressJS and MySQL </span> in order to gather user data, parse it and display the most interesting statistics 
+            for the user to see with the help of ChartJS</p>
+        
+        <div id=git><a href="https://github.com/JoseGrangerSalgado/reto-movimiento-steam-eq-6" target="_blank">Github</a></div>
+      </div>
+    </div>
+    <div class=card data-aos="fade-left">
+      <div id=tme><img src="../Images/logo.svg" alt="TeachMe">
+        <p style="font-size:x-large;"><strong>Teach Me</strong></p>
+        <p><span style="color: blue">Used HTML/CSS, Javascript, Java and Datastore</span> in order to create a tutoring Web App.
+            Users are able to match their interests and see related tutors, exchange information and upload their own bios.
+        </p>
+        <div id=git><a href="https://github.com/JoseGrangerSalgado/TeachMe" target="_blank">Github</a></div>
+      </div>
+    </div>
+    <div class=card data-aos="fade-down">
+      <div id=dpwa><img src="../Images/icon.jpg" alt="DiagnosticsPWA">
+        <p style="font-size:x-large;"><strong>DiagnosticsPWA</strong></p>
+        <p> Created a PWA which recieves information from a coupled chrome extension and uploads various real-time graphs
+            displaying your CPU information. It uses chrome.system.cpu in order to fetch the info.
+        </p>
+        <div id=git><a href="https://github.com/JoseGrangerSalgado/DiagnosticsPWA" target="_blank">Github</a></div>
+      </div>
+    </div>
+    <div id=git-hub data-aos="fade-up"><a href="https://github.com/JoseGrangerSalgado" target="_blank"><img
+          src="../Images/giticon.png" alt="github"></a>
+      <p>Find more projects on my Github</p>
+    </div>
+
+  </div>
+
+  <div class=skill id=skills>
+
+    <div id="proi" data-aos="fade-down"><strong>Skills</strong></div>
+    <div id="prod" data-aos="fade-right"><strong>Frontend</strong></div>
+    <div id=front-end>
+      <div data-aos="flip-right"><img src="../Images/html.png" alt="HTML5">
+        <p>HTML 5</p>
+      </div>
+      <div data-aos="flip-right"><img src="../Images/css.webp" alt="CSS3">
+        <p>CSS3</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/javascript.png" alt="Javascript">
+        <p>Javascript</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/wordpress.png" alt="Wordpress">
+        <p>Wordpress</p>
+      </div>
+    </div>
+    <hr>
+    <div id="prod" data-aos="fade-right"><strong>Main Languages</strong></div>
+    <div id=main-languages>
+      <div data-aos="flip-right"><img src="../Images/python.webp" alt="Python">
+        <p>Python</p>
+      </div>
+      <div data-aos="flip-up"><img src="../Images/Cpp.png" alt="CPP">
+        <p>C++</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/java.png" alt="Java">
+        <p>Java</p>
+      </div>
+    </div>
+    <hr>
+    <div id="prod" data-aos="fade-right"><strong>Secondary Languages</strong></div>
+    <div id=secondary-languages>
+      <div data-aos="flip-right"><img src="../Images/mat.png" alt="Matlab">
+        <p>Matlab</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/r.png" alt="R">
+        <p>R</p>
+      </div>
+    </div>
+    <hr>
+    <div id="prod" data-aos="fade-right"><strong>Databases</strong></div>
+    <div id=databases>
+      <div data-aos="flip-right"><img src="../Images/sql.png" alt="MySQL">
+        <p>MySQL</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/mongo.png" alt="MongoDB">
+        <p>MongoDB</p>
+      </div>
+    </div>
+    <hr>
+    <div id="prod" data-aos="fade-right"><strong>Development Tools</strong></div>
+    <div id=tools>
+      <div data-aos="flip-right"><img src="../Images/flutter.png" alt="Flutter">
+        <p>Flutter</p>
+      </div>
+      <div data-aos="flip-right"><img src="../Images/git.png" alt="Git">
+        <p>Git</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/githubs.png" alt="Github">
+        <p>Github</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/lat.png" alt="LaTeX">
+        <p>LaTeX</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/npm.png" alt="NPM">
+        <p>NPM</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/googlecloud.png" alt="Google Cloud">
+        <p>Google Cloud</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/pwa.png" alt="PWA">
+        <p>PWA</p>
+      </div>
+    </div>
+    <hr>
+    <div id="prod" data-aos="fade-right"><strong>Frameworks</strong></div>
+    <div id=frameworks>
+      <div data-aos="flip-right"><img src="../Images/node.png" alt="NodeJS">
+        <p>NodeJS</p>
+      </div>
+      <div data-aos="flip-right"><img src="../Images/express.png" alt="Git">
+        <p>Express</p>
+      </div>
+      <div data-aos="flip-left"><img src="../Images/jque.png" alt="JQuery">
+        <p>JQuery</p>
+      </div>
+    </div>
+    <div id="proi" data-aos="fade-up">Check my (outdated) <a href="../Images/JoseGrangerSalgado_Resume.pdf"
+        target="_blank">resume</a> for more information</div>
+
+  </div>
+
+  <div class=contact id=contacts>
+    <a href="mailto:chasedhydra@gmail.com"><button id=contact-button data-aos="fade-down">Send me an
+        e-mail</button></a>
+    <br>
+    <br>
+    <hr>
+    <p id=proi data-aos="fade-down">Post a message on the website:</p>
+    <form id=my-form2>
+      <textarea id=txt2 name="title" placeholder="Write your message:" maxlength = "200" data-aos="fade-left"></textarea>
+      <br/>
+      <button data-aos="fade-down" onclick="openNav2()">Submit</button>
+    </form>
+    <br>
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="../Javascript/main.js"></script>
+</body>
+
+</html>
